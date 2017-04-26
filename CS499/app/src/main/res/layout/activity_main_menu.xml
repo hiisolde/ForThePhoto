@@ -29,7 +29,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New near me"/>
+            android:text="New near me"
+            android:textSize="18dp"/>
 
     </LinearLayout>
 
@@ -39,9 +40,11 @@
         android:layout_weight="70"
         android:orientation="vertical">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/mic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
             android:src="@drawable/icecream"/>
     </LinearLayout>
 
@@ -57,17 +60,19 @@
             android:layout_weight="1"
             tools:ignore="Suspicious0dp" />
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/searchbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/search" />
+            android:src="@drawable/searchicon"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/bookmarkbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/bookmark"/>
