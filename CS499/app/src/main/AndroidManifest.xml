@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".SearchScreen" />
         <activity android:name=".BookmarksScreen" />
-        <activity android:name=".LocationItem"></activity>
+        <activity android:name=".LocationItem" />
+        <activity android:name=".SearchResults" />
+        <activity android:name=".LocationExample"></activity>
     </application>
 
 </manifest>

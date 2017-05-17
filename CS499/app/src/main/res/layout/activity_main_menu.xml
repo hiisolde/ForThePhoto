@@ -21,15 +21,27 @@
             android:text="ForThePhoto"
             android:textSize="24dp"/>
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Search"/>
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Find aesthetic places"
+                android:layout_weight="90"/>
+
+            <Button
+                android:id="@+id/topsearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New near me"
+            android:text="New near me:"
             android:textSize="18dp"/>
 
     </LinearLayout>

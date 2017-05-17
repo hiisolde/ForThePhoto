@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.isoldealfaro.cs499.SearchScreen">
+    tools:context="com.example.isoldealfaro.cs499.LocationExample">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="15">
+        android:layout_weight="5">
 
         <TextView
             android:layout_width="match_parent"
@@ -20,39 +20,31 @@
             android:text="ForThePhoto"
             android:textSize="24dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:hint="Find aesthetic places"
-                android:layout_weight="90"/>
-
-            <Button
-                android:id="@+id/topsearch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Search" />
-        </LinearLayout>
-        
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="85">
+        android:layout_weight="90">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="No results yet :("
-            android:textSize="30dp"/>
+            android:text="The Museum of Ice Cream"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When: Now - June 2017\nLocation: 2018 E 7th Place Los Angeles, CA 90021\nPrice: $29"
+            android:textSize="18dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/museum"/>
 
     </LinearLayout>
-
 
 </LinearLayout>
