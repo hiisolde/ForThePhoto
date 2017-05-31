@@ -2,14 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.isoldealfaro.cs499">
 
-    <application
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="ForThePhoto"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +27,17 @@
         <activity android:name=".BookmarksScreen" />
         <activity android:name=".LocationItem" />
         <activity android:name=".SearchResults" />
-        <activity android:name=".LocationExample"></activity>
+        <activity android:name=".LocationExample" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCd0RTaXtK1NoWEY1fBYSG_Wr_QnORKIPk"/>
+            android:value="AIzaSyDWPDHjLaHbLWCRzDp6C77_NMaxnU2TNms" />
+
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

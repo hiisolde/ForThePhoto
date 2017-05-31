@@ -37,7 +37,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="When: Now - June 2017\nLocation: 2018 E 7th Place Los Angeles, CA 90021\nPrice: $29"
+            android:text="When: Now - August 2017\nLocation: 2018 E 7th Place Los Angeles, CA 90021\nPrice: $29"
             android:textSize="18dp"/>
 
         <ImageView

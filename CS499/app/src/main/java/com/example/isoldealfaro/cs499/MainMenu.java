@@ -15,20 +15,13 @@ import android.support.v4.app.FragmentActivity;
 
 public class MainMenu extends FragmentActivity implements OnConnectionFailedListener {
 
-    private GoogleApiClient mGoogleApiClient;
+    //private GoogleApiClient mGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-
-        mGoogleApiClient = new GoogleApiClient
-                .Builder(this)
-                .addApi(Places.GEO_DATA_API)
-                .addApi(Places.PLACE_DETECTION_API)
-                .enableAutoManage(this, this)
-                .build();
 
         Button topSearch = (Button) findViewById(R.id.topsearch);
         topSearch.setOnClickListener(new View.OnClickListener() {
