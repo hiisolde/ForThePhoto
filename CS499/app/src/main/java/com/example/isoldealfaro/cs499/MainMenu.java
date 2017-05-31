@@ -6,13 +6,29 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Button;
 import android.content.Intent;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.places.Places;
 
-public class MainMenu extends AppCompatActivity {
+import android.support.v4.app.FragmentActivity;
+
+public class MainMenu extends FragmentActivity implements OnConnectionFailedListener {
+
+    private GoogleApiClient mGoogleApiClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+
+        mGoogleApiClient = new GoogleApiClient
+                .Builder(this)
+                .addApi(Places.GEO_DATA_API)
+                .addApi(Places.PLACE_DETECTION_API)
+                .enableAutoManage(this, this)
+                .build();
 
         Button topSearch = (Button) findViewById(R.id.topsearch);
         topSearch.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +65,15 @@ public class MainMenu extends AppCompatActivity {
             }
 
         });
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult result) {
+        // An unresolvable error has occurred and a connection to Google APIs
+        // could not be established. Display an error message, or handle
+        // the failure silently
+
+        System.out.print("Connection failed");
     }
 
 }
